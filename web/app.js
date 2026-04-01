@@ -37,16 +37,16 @@ function calculateDistance(lat1, lon1, lat2, lon2) {
     return R * c;
 }
 
-async function searchNearbySchools(coords, radiusKm) {
+async function searchNearbyPlaces(coords, radiusKm) {
     const { Place } = await google.maps.importLibrary("places");
     
     const request = {
-        fields: ["displayName", "location", "formattedAddress"],
+        fields: ["displayName", "location", "id"],
         locationRestriction: {
             center: { lat: coords.latitude, lng: coords.longitude },
             radius: radiusKm * 1000, // Convert km to meters
         },
-        includedPrimaryTypes: ["school"],
+        includedPrimaryTypes: ["restaurant", "cafe", "store", "school", "park", "museum", "tourist_attraction"],
         maxResultCount: 20,
     };
 
@@ -56,7 +56,8 @@ async function searchNearbySchools(coords, radiusKm) {
             name: p.displayName,
             lat: p.location.lat(),
             lng: p.location.lng(),
-            info: p.formattedAddress || "A local school"
+            id: p.id,
+            placeObj: p
         }));
     } catch (err) {
         console.error("Places search failed", err);
@@ -73,7 +74,7 @@ async function renderPlaces(radius) {
     const existing = document.querySelectorAll('.poi');
     existing.forEach(el => el.parentNode.removeChild(el));
 
-    const schools = await searchNearbySchools(userCoords, radius);
+    const schools = await searchNearbyPlaces(userCoords, radius);
     
     infoBox.innerText = schools.length > 0 ? 
         `Found ${schools.length} schools. Point your camera around!` : 
@@ -91,8 +92,44 @@ async function renderPlaces(radius) {
         entity.setAttribute('align', 'center');
         entity.setAttribute('position', '0 5 0'); // Raise text above ground level
         
-        entity.addEventListener('click', () => {
-            infoBox.innerText = place.info;
+        entity.addEventListener('click', async () => {
+            infoBox.innerHTML = "Loading details...";
+            
+            // Fetch rich details for the specific place
+            await place.placeObj.fetchFields({ 
+                fields: ["formattedAddress", "rating", "userRatingCount", "photos", "reviews", "websiteUri", "editorialSummary"] 
+            });
+
+            let html = `<span class="close-btn" onclick="document.getElementById('info').innerHTML='Point your camera around...'">×</span>`;
+            html += `<h3>${place.name}</h3>`;
+            
+            if (place.placeObj.rating) {
+                html += `<p class="rating">★ ${place.placeObj.rating} (${place.placeObj.userRatingCount} reviews)</p>`;
+            }
+
+            if (place.placeObj.photos && place.placeObj.photos.length > 0) {
+                const photoUrl = place.placeObj.photos[0].getURI({maxWidth: 400});
+                html += `<img src="${photoUrl}" class="place-photo">`;
+            }
+
+            html += `<p>${place.placeObj.formattedAddress}</p>`;
+            
+            if (place.placeObj.editorialSummary) {
+                html += `<p><i>${place.placeObj.editorialSummary}</i></p>`;
+            }
+
+            if (place.placeObj.reviews && place.placeObj.reviews.length > 0) {
+                html += `<h4>Latest Reviews:</h4>`;
+                place.placeObj.reviews.slice(0, 2).forEach(rev => {
+                    html += `<div class="review"><b>${rev.authorAttribution.displayName}:</b> "${rev.text.substring(0, 100)}..."</div>`;
+                });
+            }
+
+            if (place.placeObj.websiteUri) {
+                html += `<p><a href="${place.placeObj.websiteUri}" target="_blank" style="color: #4285f4">Visit Website</a></p>`;
+            }
+
+            infoBox.innerHTML = html;
         });
 
         scene.appendChild(entity);

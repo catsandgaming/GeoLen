@@ -26,12 +26,19 @@
             background: rgba(0, 0, 0, 0.8);
             color: white;
             padding: 20px;
-            border-radius: 15px;
+            border-radius: 15px 15px 0 0;
             z-index: 9999;
             text-align: center;
+            max-height: 70vh;
+            overflow-y: auto;
+            transition: max-height 0.3s ease-in-out;
         }
         input[type=range] { width: 100%; margin: 10px 0; }
-        .location-details { font-size: 0.9em; margin-bottom: 10px; min-height: 40px; }
+        .location-details { font-size: 0.9em; text-align: left; }
+        .place-photo { width: 100%; border-radius: 10px; margin: 10px 0; }
+        .rating { color: #fbbc04; font-weight: bold; }
+        .review { border-top: 1px solid #444; padding: 5px 0; margin-top: 5px; font-size: 0.85em; }
+        .close-btn { float: right; cursor: pointer; font-size: 1.5em; }
     </style>
 </head>
 <body>
