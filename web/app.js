@@ -41,7 +41,7 @@ async function searchNearbyPlaces(coords, radiusKm) {
     const { Place } = await google.maps.importLibrary("places");
     
     const request = {
-        fields: ["displayName", "location", "id"],
+        fields: ["displayName", "location", "id", "primaryType"],
         locationRestriction: {
             center: { lat: coords.latitude, lng: coords.longitude },
             radius: radiusKm * 1000, // Convert km to meters
@@ -57,6 +57,7 @@ async function searchNearbyPlaces(coords, radiusKm) {
             lat: p.location.lat(),
             lng: p.location.lng(),
             id: p.id,
+            type: p.primaryType,
             placeObj: p
         }));
     } catch (err) {
@@ -69,64 +70,70 @@ async function renderPlaces(radius) {
     if (isSearching || !userCoords) return;
     
     isSearching = true;
-    infoBox.innerText = "Searching for schools...";
+    console.log("Searching for nearby places...");
 
     const existing = document.querySelectorAll('.poi');
     existing.forEach(el => el.parentNode.removeChild(el));
 
-    const schools = await searchNearbyPlaces(userCoords, radius);
-    
-    infoBox.innerText = schools.length > 0 ? 
-        `Found ${schools.length} schools. Point your camera around!` : 
-        "No schools found in this radius.";
+    const places = await searchNearbyPlaces(userCoords, radius);
 
-    schools.forEach(place => {
+    places.forEach(place => {
         const dist = calculateDistance(userCoords.latitude, userCoords.longitude, place.lat, place.lng);
         
-        const entity = document.createElement('a-text');
+        // Container entity for the marker
+        const entity = document.createElement('a-entity');
         entity.setAttribute('class', 'poi');
-        entity.setAttribute('value', `${place.name}\n(${dist.toFixed(2)} km)`);
         entity.setAttribute('gps-entity-place', `latitude: ${place.lat}; longitude: ${place.lng};`);
-        entity.setAttribute('scale', '20 20 20');
         entity.setAttribute('look-at', '[gps-camera]');
-        entity.setAttribute('align', 'center');
-        entity.setAttribute('position', '0 5 0'); // Raise text above ground level
+        entity.setAttribute('scale', '15 15 15');
+
+        // Standard Red Pin (matches 2.png mockup)
+        const image = document.createElement('a-image');
+        image.setAttribute('src', 'https://maps.google.com/mapfiles/ms/icons/red-dot.png');
+        image.setAttribute('position', '0 1.5 0');
+        image.setAttribute('width', '1');
+        image.setAttribute('height', '1');
+
+        // Text Label
+        const text = document.createElement('a-text');
+        text.setAttribute('value', `${place.name}\n(${dist.toFixed(2)} km)`);
+        text.setAttribute('align', 'center');
+        text.setAttribute('position', '0 2.5 0');
+        text.setAttribute('scale', '1.2 1.2 1.2');
+
+        entity.appendChild(image);
+        entity.appendChild(text);
         
         entity.addEventListener('click', async () => {
-            infoBox.innerHTML = "Loading details...";
+            const panel = document.querySelector('.ui-panel');
+            panel.style.display = 'block';
+            infoBox.innerHTML = "Loading...";
             
-            // Fetch rich details for the specific place
             await place.placeObj.fetchFields({ 
-                fields: ["formattedAddress", "rating", "userRatingCount", "photos", "reviews", "websiteUri", "editorialSummary"] 
+                fields: ["formattedAddress", "rating", "userRatingCount", "photos", "websiteUri", "types"] 
             });
 
-            let html = `<span class="close-btn" onclick="document.getElementById('info').innerHTML='Point your camera around...'">×</span>`;
+            let html = `<span class="close-btn" onclick="this.parentElement.parentElement.style.display='none'">×</span>`;
             html += `<h3>${place.name}</h3>`;
+            html += `<div class="category">${place.placeObj.types[0].replace(/_/g, ' ')}</div>`;
             
             if (place.placeObj.rating) {
                 html += `<p class="rating">★ ${place.placeObj.rating} (${place.placeObj.userRatingCount} reviews)</p>`;
             }
 
-            if (place.placeObj.photos && place.placeObj.photos.length > 0) {
-                const photoUrl = place.placeObj.photos[0].getURI({maxWidth: 400});
-                html += `<img src="${photoUrl}" class="place-photo">`;
-            }
-
             html += `<p>${place.placeObj.formattedAddress}</p>`;
             
-            if (place.placeObj.editorialSummary) {
-                html += `<p><i>${place.placeObj.editorialSummary}</i></p>`;
-            }
-
-            if (place.placeObj.reviews && place.placeObj.reviews.length > 0) {
-                html += `<h4>Latest Reviews:</h4>`;
-                place.placeObj.reviews.slice(0, 2).forEach(rev => {
-                    html += `<div class="review"><b>${rev.authorAttribution.displayName}:</b> "${rev.text.substring(0, 100)}..."</div>`;
+            // Photo Grid (matches 4.png mockup)
+            if (place.placeObj.photos && place.placeObj.photos.length > 0) {
+                html += `<div class="photo-grid">`;
+                place.placeObj.photos.slice(0, 4).forEach(photo => {
+                    html += `<img src="${photo.getURI({maxWidth: 300})}">`;
                 });
+                html += `</div>`;
             }
 
             if (place.placeObj.websiteUri) {
-                html += `<p><a href="${place.placeObj.websiteUri}" target="_blank" style="color: #4285f4">Visit Website</a></p>`;
+                html += `<p style="text-align:center"><a href="${place.placeObj.websiteUri}" target="_blank" style="background:#000; color:#fff; padding:10px 20px; text-decoration:none; border-radius:10px; display:inline-block; margin-top:15px;">See more</a></p>`;
             }
 
             infoBox.innerHTML = html;
