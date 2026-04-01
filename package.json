@@ -1,0 +1,11 @@
+{
+  "name": "geolocate-ar",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "echo 'No build step required'",
+    "start": "serve -l $PORT web"
+  },
+  "dependencies": {
+    "serve": "^14.2.6"
+  }
+}
