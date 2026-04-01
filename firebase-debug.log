@@ -1,0 +1,205 @@
+[debug] [2026-04-01T07:42:06.490Z] ----------------------------------------------------------------------
+[debug] [2026-04-01T07:42:06.494Z] Command:       C:\nvm4w\nodejs\node.exe C:\nvm4w\nodejs\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2026-04-01T07:42:06.495Z] CLI Version:   15.12.0
+[debug] [2026-04-01T07:42:06.495Z] Platform:      win32
+[debug] [2026-04-01T07:42:06.495Z] Node Version:  v20.9.0
+[debug] [2026-04-01T07:42:06.495Z] Time:          Wed Apr 01 2026 08:42:06 GMT+0100 (British Summer Time)
+[debug] [2026-04-01T07:42:06.496Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Ted\Documents\APP1234
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[debug] [2026-04-01T07:43:26.152Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-04-01T07:43:26.153Z] > authorizing via signed-in user (robloxianted@gmail.com)
+[debug] [2026-04-01T07:43:26.155Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:43:26.155Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:43:26.159Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2026-04-01T07:43:26.719Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2026-04-01T07:43:26.720Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] 
+=== App Hosting Setup
+[debug] [2026-04-01T07:43:33.721Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:43:33.721Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:43:33.722Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/asop-74f7d/billingInfo [none]
+[debug] [2026-04-01T07:43:33.983Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/asop-74f7d/billingInfo 200
+[debug] [2026-04-01T07:43:33.984Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/asop-74f7d/billingInfo {"name":"projects/asop-74f7d/billingInfo","projectId":"asop-74f7d","billingAccountName":"billingAccounts/019E27-3DAC78-E0C35F","billingEnabled":true}
+[debug] [2026-04-01T07:43:33.986Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:43:33.987Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:43:33.987Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/asop-74f7d/services/firebaseapphosting.googleapis.com [none]
+[debug] [2026-04-01T07:43:33.987Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/asop-74f7d/services/firebaseapphosting.googleapis.com  x-goog-user-project=asop-74f7d
+[debug] [2026-04-01T07:43:34.838Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/asop-74f7d/services/firebaseapphosting.googleapis.com 200
+[debug] [2026-04-01T07:43:34.838Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/asop-74f7d/services/firebaseapphosting.googleapis.com [omitted]
+[debug] [2026-04-01T07:43:34.839Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:43:34.839Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:43:34.839Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/asop-74f7d/services/firebaseapphosting.googleapis.com:enable [none]
+[debug] [2026-04-01T07:43:34.839Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/asop-74f7d/services/firebaseapphosting.googleapis.com:enable  x-goog-user-project=asop-74f7d
+[debug] [2026-04-01T07:43:36.048Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/asop-74f7d/services/firebaseapphosting.googleapis.com:enable 200
+[debug] [2026-04-01T07:43:36.049Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/asop-74f7d/services/firebaseapphosting.googleapis.com:enable [omitted]
+[debug] [2026-04-01T07:43:46.079Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:43:46.079Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:43:46.080Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:43:46.080Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:43:46.081Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:43:46.082Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:43:46.082Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:43:46.082Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:43:46.083Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:43:46.083Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:43:46.084Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:43:46.084Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:43:46.084Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/asop-74f7d/services/developerconnect.googleapis.com [none]
+[debug] [2026-04-01T07:43:46.085Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/asop-74f7d/services/developerconnect.googleapis.com  x-goog-user-project=asop-74f7d
+[debug] [2026-04-01T07:43:46.088Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/asop-74f7d/services/cloudbuild.googleapis.com [none]
+[debug] [2026-04-01T07:43:46.088Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/asop-74f7d/services/cloudbuild.googleapis.com  x-goog-user-project=asop-74f7d
+[debug] [2026-04-01T07:43:46.091Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/asop-74f7d/services/secretmanager.googleapis.com [none]
+[debug] [2026-04-01T07:43:46.091Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/asop-74f7d/services/secretmanager.googleapis.com  x-goog-user-project=asop-74f7d
+[debug] [2026-04-01T07:43:46.093Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/asop-74f7d/services/run.googleapis.com [none]
+[debug] [2026-04-01T07:43:46.093Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/asop-74f7d/services/run.googleapis.com  x-goog-user-project=asop-74f7d
+[debug] [2026-04-01T07:43:46.096Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/asop-74f7d/services/artifactregistry.googleapis.com [none]
+[debug] [2026-04-01T07:43:46.096Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/asop-74f7d/services/artifactregistry.googleapis.com  x-goog-user-project=asop-74f7d
+[debug] [2026-04-01T07:43:46.099Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/asop-74f7d/services/iam.googleapis.com [none]
+[debug] [2026-04-01T07:43:46.099Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/asop-74f7d/services/iam.googleapis.com  x-goog-user-project=asop-74f7d
+[debug] [2026-04-01T07:43:46.839Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/asop-74f7d/services/cloudbuild.googleapis.com 200
+[debug] [2026-04-01T07:43:46.840Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/asop-74f7d/services/cloudbuild.googleapis.com [omitted]
+[debug] [2026-04-01T07:43:46.856Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/asop-74f7d/services/developerconnect.googleapis.com 200
+[debug] [2026-04-01T07:43:46.856Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/asop-74f7d/services/developerconnect.googleapis.com [omitted]
+[debug] [2026-04-01T07:43:46.857Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:43:46.857Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:43:46.857Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/asop-74f7d/services/developerconnect.googleapis.com:enable [none]
+[debug] [2026-04-01T07:43:46.858Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/asop-74f7d/services/developerconnect.googleapis.com:enable  x-goog-user-project=asop-74f7d
+[debug] [2026-04-01T07:43:46.861Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/asop-74f7d/services/secretmanager.googleapis.com 200
+[debug] [2026-04-01T07:43:46.862Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/asop-74f7d/services/secretmanager.googleapis.com [omitted]
+[debug] [2026-04-01T07:43:46.874Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/asop-74f7d/services/run.googleapis.com 200
+[debug] [2026-04-01T07:43:46.875Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/asop-74f7d/services/run.googleapis.com [omitted]
+[debug] [2026-04-01T07:43:46.898Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/asop-74f7d/services/artifactregistry.googleapis.com 200
+[debug] [2026-04-01T07:43:46.899Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/asop-74f7d/services/artifactregistry.googleapis.com [omitted]
+[debug] [2026-04-01T07:43:46.919Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/asop-74f7d/services/iam.googleapis.com 200
+[debug] [2026-04-01T07:43:46.919Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/asop-74f7d/services/iam.googleapis.com [omitted]
+[debug] [2026-04-01T07:43:47.923Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/asop-74f7d/services/developerconnect.googleapis.com:enable 200
+[debug] [2026-04-01T07:43:47.924Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/asop-74f7d/services/developerconnect.googleapis.com:enable [omitted]
+[debug] [2026-04-01T07:43:57.943Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:43:57.944Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:43:57.944Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/asop-74f7d/serviceAccounts/firebase-app-hosting-compute@asop-74f7d.iam.gserviceaccount.com:testIamPermissions [none]
+[debug] [2026-04-01T07:43:57.945Z] >>> [apiv2][(partial)header] POST https://iam.googleapis.com/v1/projects/asop-74f7d/serviceAccounts/firebase-app-hosting-compute@asop-74f7d.iam.gserviceaccount.com:testIamPermissions  x-goog-user-project=asop-74f7d
+[debug] [2026-04-01T07:43:57.945Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/asop-74f7d/serviceAccounts/firebase-app-hosting-compute@asop-74f7d.iam.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2026-04-01T07:43:58.605Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/asop-74f7d/serviceAccounts/firebase-app-hosting-compute@asop-74f7d.iam.gserviceaccount.com:testIamPermissions 404
+[debug] [2026-04-01T07:43:58.605Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/asop-74f7d/serviceAccounts/firebase-app-hosting-compute@asop-74f7d.iam.gserviceaccount.com:testIamPermissions {"error":{"code":404,"message":"Unknown service account","status":"NOT_FOUND"}}
+[debug] [2026-04-01T07:43:58.607Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:43:58.607Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:43:58.608Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/asop-74f7d/serviceAccounts [none]
+[debug] [2026-04-01T07:43:58.608Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/asop-74f7d/serviceAccounts {"accountId":"firebase-app-hosting-compute","serviceAccount":{"displayName":"Firebase App Hosting compute service account","description":"Default service account used to run builds and deploys for Firebase App Hosting"}}
+[debug] [2026-04-01T07:43:59.403Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/asop-74f7d/serviceAccounts 200
+[debug] [2026-04-01T07:43:59.404Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/asop-74f7d/serviceAccounts [omitted]
+[debug] [2026-04-01T07:43:59.404Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:43:59.404Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:43:59.405Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/asop-74f7d:getIamPolicy [none]
+[debug] [2026-04-01T07:44:00.169Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/asop-74f7d:getIamPolicy 200
+[debug] [2026-04-01T07:44:00.169Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/asop-74f7d:getIamPolicy {"version":1,"etag":"BwZAbbJTes4=","bindings":[{"role":"roles/artifactregistry.serviceAgent","members":["serviceAccount:service-955514442329@gcp-sa-artifactregistry.iam.gserviceaccount.com"]},{"role":"roles/cloudbuild.builds.builder","members":["serviceAccount:955514442329@cloudbuild.gserviceaccount.com"]},{"role":"roles/cloudbuild.serviceAgent","members":["serviceAccount:service-955514442329@gcp-sa-cloudbuild.iam.gserviceaccount.com"]},{"role":"roles/cloudfunctions.serviceAgent","members":["serviceAccount:service-955514442329@gcf-admin-robot.iam.gserviceaccount.com"]},{"role":"roles/containerregistry.ServiceAgent","members":["serviceAccount:service-955514442329@containerregistry.iam.gserviceaccount.com"]},{"role":"roles/editor","members":["serviceAccount:955514442329-compute@developer.gserviceaccount.com","serviceAccount:asop-74f7d@appspot.gserviceaccount.com"]},{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:service-955514442329@gcp-sa-firebase.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-fbsvc@asop-74f7d.iam.gserviceaccount.com"]},{"role":"roles/firebaserules.system","members":["serviceAccount:service-955514442329@firebase-rules.iam.gserviceaccount.com"]},{"role":"roles/firebasestorage.serviceAgent","members":["serviceAccount:service-955514442329@gcp-sa-firebasestorage.iam.gserviceaccount.com"]},{"role":"roles/firestore.serviceAgent","members":["serviceAccount:service-955514442329@gcp-sa-firestore.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-fbsvc@asop-74f7d.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:robloxianted@gmail.com"]},{"role":"roles/run.serviceAgent","members":["serviceAccount:service-955514442329@serverless-robot-prod.iam.gserviceaccount.com"]},{"role":"roles/storage.admin","members":["serviceAccount:firebase-adminsdk-fbsvc@asop-74f7d.iam.gserviceaccount.com"]}]}
+[debug] [2026-04-01T07:44:00.170Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:44:00.170Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:44:00.170Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/asop-74f7d:setIamPolicy [none]
+[debug] [2026-04-01T07:44:00.171Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/asop-74f7d:setIamPolicy {"policy":{"version":1,"etag":"BwZAbbJTes4=","bindings":[{"role":"roles/artifactregistry.serviceAgent","members":["serviceAccount:service-955514442329@gcp-sa-artifactregistry.iam.gserviceaccount.com"]},{"role":"roles/cloudbuild.builds.builder","members":["serviceAccount:955514442329@cloudbuild.gserviceaccount.com"]},{"role":"roles/cloudbuild.serviceAgent","members":["serviceAccount:service-955514442329@gcp-sa-cloudbuild.iam.gserviceaccount.com"]},{"role":"roles/cloudfunctions.serviceAgent","members":["serviceAccount:service-955514442329@gcf-admin-robot.iam.gserviceaccount.com"]},{"role":"roles/containerregistry.ServiceAgent","members":["serviceAccount:service-955514442329@containerregistry.iam.gserviceaccount.com"]},{"role":"roles/editor","members":["serviceAccount:955514442329-compute@developer.gserviceaccount.com","serviceAccount:asop-74f7d@appspot.gserviceaccount.com"]},{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:service-955514442329@gcp-sa-firebase.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-fbsvc@asop-74f7d.iam.gserviceaccount.com","serviceAccount:firebase-app-hosting-compute@asop-74f7d.iam.gserviceaccount.com"]},{"role":"roles/firebaserules.system","members":["serviceAccount:service-955514442329@firebase-rules.iam.gserviceaccount.com"]},{"role":"roles/firebasestorage.serviceAgent","members":["serviceAccount:service-955514442329@gcp-sa-firebasestorage.iam.gserviceaccount.com"]},{"role":"roles/firestore.serviceAgent","members":["serviceAccount:service-955514442329@gcp-sa-firestore.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-fbsvc@asop-74f7d.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:robloxianted@gmail.com"]},{"role":"roles/run.serviceAgent","members":["serviceAccount:service-955514442329@serverless-robot-prod.iam.gserviceaccount.com"]},{"role":"roles/storage.admin","members":["serviceAccount:firebase-adminsdk-fbsvc@asop-74f7d.iam.gserviceaccount.com"]},{"role":"roles/firebaseapphosting.computeRunner","members":["serviceAccount:firebase-app-hosting-compute@asop-74f7d.iam.gserviceaccount.com"]},{"role":"roles/developerconnect.readTokenAccessor","members":["serviceAccount:firebase-app-hosting-compute@asop-74f7d.iam.gserviceaccount.com"]},{"role":"roles/storage.objectViewer","members":["serviceAccount:firebase-app-hosting-compute@asop-74f7d.iam.gserviceaccount.com"]}]},"updateMask":"bindings"}
+[debug] [2026-04-01T07:44:01.068Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/asop-74f7d:setIamPolicy 200
+[debug] [2026-04-01T07:44:01.069Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/asop-74f7d:setIamPolicy {"version":1,"etag":"BwZOYT9MM3Y=","bindings":[{"role":"roles/artifactregistry.serviceAgent","members":["serviceAccount:service-955514442329@gcp-sa-artifactregistry.iam.gserviceaccount.com"]},{"role":"roles/cloudbuild.builds.builder","members":["serviceAccount:955514442329@cloudbuild.gserviceaccount.com"]},{"role":"roles/cloudbuild.serviceAgent","members":["serviceAccount:service-955514442329@gcp-sa-cloudbuild.iam.gserviceaccount.com"]},{"role":"roles/cloudfunctions.serviceAgent","members":["serviceAccount:service-955514442329@gcf-admin-robot.iam.gserviceaccount.com"]},{"role":"roles/containerregistry.ServiceAgent","members":["serviceAccount:service-955514442329@containerregistry.iam.gserviceaccount.com"]},{"role":"roles/developerconnect.readTokenAccessor","members":["serviceAccount:firebase-app-hosting-compute@asop-74f7d.iam.gserviceaccount.com"]},{"role":"roles/editor","members":["serviceAccount:955514442329-compute@developer.gserviceaccount.com","serviceAccount:asop-74f7d@appspot.gserviceaccount.com"]},{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:service-955514442329@gcp-sa-firebase.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-fbsvc@asop-74f7d.iam.gserviceaccount.com","serviceAccount:firebase-app-hosting-compute@asop-74f7d.iam.gserviceaccount.com"]},{"role":"roles/firebaseapphosting.computeRunner","members":["serviceAccount:firebase-app-hosting-compute@asop-74f7d.iam.gserviceaccount.com"]},{"role":"roles/firebaserules.system","members":["serviceAccount:service-955514442329@firebase-rules.iam.gserviceaccount.com"]},{"role":"roles/firebasestorage.serviceAgent","members":["serviceAccount:service-955514442329@gcp-sa-firebasestorage.iam.gserviceaccount.com"]},{"role":"roles/firestore.serviceAgent","members":["serviceAccount:service-955514442329@gcp-sa-firestore.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-fbsvc@asop-74f7d.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:robloxianted@gmail.com"]},{"role":"roles/run.serviceAgent","members":["serviceAccount:service-955514442329@serverless-robot-prod.iam.gserviceaccount.com"]},{"role":"roles/storage.admin","members":["serviceAccount:firebase-adminsdk-fbsvc@asop-74f7d.iam.gserviceaccount.com"]},{"role":"roles/storage.objectViewer","members":["serviceAccount:firebase-app-hosting-compute@asop-74f7d.iam.gserviceaccount.com"]}]}
+[info] i  This command links your local project to Firebase App Hosting. You will be able to deploy your web app with `firebase deploy` after setup. 
+[info] i  === Set up your backend 
+[debug] [2026-04-01T07:44:23.703Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:44:23.703Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:44:23.703Z] >>> [apiv2][query] GET https://firebaseapphosting.googleapis.com/v1beta/projects/asop-74f7d/locations 
+[debug] [2026-04-01T07:44:24.448Z] <<< [apiv2][status] GET https://firebaseapphosting.googleapis.com/v1beta/projects/asop-74f7d/locations 200
+[debug] [2026-04-01T07:44:24.448Z] <<< [apiv2][body] GET https://firebaseapphosting.googleapis.com/v1beta/projects/asop-74f7d/locations {"locations":[{"name":"projects/asop-74f7d/locations/asia-east1","locationId":"asia-east1","displayName":"Taiwan"},{"name":"projects/asop-74f7d/locations/asia-southeast1","locationId":"asia-southeast1","displayName":"Singapore"},{"name":"projects/asop-74f7d/locations/europe-west4","locationId":"europe-west4","displayName":"Netherlands"},{"name":"projects/asop-74f7d/locations/us-central1","locationId":"us-central1","displayName":"Iowa"},{"name":"projects/asop-74f7d/locations/us-east4","locationId":"us-east4","displayName":"Northern Virginia"},{"name":"projects/asop-74f7d/locations/us-east5","locationId":"us-east5","displayName":"Columbus"}]}
+[info] +  Location set to europe-west4.
+ 
+[debug] [2026-04-01T07:44:38.911Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:44:38.911Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:44:38.911Z] >>> [apiv2][query] GET https://firebaseapphosting.googleapis.com/v1beta/projects/asop-74f7d/locations/europe-west4/backends/geolabs-buthole [none]
+[debug] [2026-04-01T07:44:39.053Z] <<< [apiv2][status] GET https://firebaseapphosting.googleapis.com/v1beta/projects/asop-74f7d/locations/europe-west4/backends/geolabs-buthole 404
+[debug] [2026-04-01T07:44:39.053Z] <<< [apiv2][body] GET https://firebaseapphosting.googleapis.com/v1beta/projects/asop-74f7d/locations/europe-west4/backends/geolabs-buthole {"error":{"code":404,"message":"Resource 'projects/asop-74f7d/locations/europe-west4/backends/geolabs-buthole' was not found","status":"NOT_FOUND","details":[{"@type":"type.googleapis.com/google.rpc.ResourceInfo","resourceName":"projects/asop-74f7d/locations/europe-west4/backends/geolabs-buthole"}]}}
+[info] +  Name set to geolabs-buthole
+ 
+[debug] [2026-04-01T07:44:39.054Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:44:39.055Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:44:39.056Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/asop-74f7d/webApps pageSize=100
+[debug] [2026-04-01T07:44:39.317Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/asop-74f7d/webApps 200
+[debug] [2026-04-01T07:44:39.317Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/asop-74f7d/webApps {"apps":[{"name":"projects/asop-74f7d/webApps/1:955514442329:web:18b4c26eaeab5fc9031748","appId":"1:955514442329:web:18b4c26eaeab5fc9031748","displayName":"Cat Chat","projectId":"asop-74f7d","webId":"MDEzNzExNTItYWIzZC00MDg2LWFjN2ItNWQxOWYwODgxODdk","apiKeyId":"31ec59b0-b48f-4e35-ade3-0bbdd2c334ec","state":"ACTIVE","expireTime":"1970-01-01T00:00:00Z","etag":"1_9e2d4de1-0776-464b-814d-968a7202e3df"}]}
+[debug] [2026-04-01T07:44:39.318Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:44:39.318Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:44:39.319Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/asop-74f7d/webApps pageSize=100
+[debug] [2026-04-01T07:44:39.574Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/asop-74f7d/webApps 200
+[debug] [2026-04-01T07:44:39.574Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/asop-74f7d/webApps {"apps":[{"name":"projects/asop-74f7d/webApps/1:955514442329:web:18b4c26eaeab5fc9031748","appId":"1:955514442329:web:18b4c26eaeab5fc9031748","displayName":"Cat Chat","projectId":"asop-74f7d","webId":"MDEzNzExNTItYWIzZC00MDg2LWFjN2ItNWQxOWYwODgxODdk","apiKeyId":"31ec59b0-b48f-4e35-ade3-0bbdd2c334ec","state":"ACTIVE","expireTime":"1970-01-01T00:00:00Z","etag":"1_9e2d4de1-0776-464b-814d-968a7202e3df"}]}
+[debug] [2026-04-01T07:44:39.575Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:44:39.576Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:44:39.576Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/asop-74f7d/webApps [none]
+[debug] [2026-04-01T07:44:39.576Z] >>> [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/asop-74f7d/webApps {"displayName":"geolabs-buthole"}
+[debug] [2026-04-01T07:44:40.767Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/asop-74f7d/webApps 200
+[debug] [2026-04-01T07:44:40.768Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/asop-74f7d/webApps {"name":"operations/workflows/MmUxNDlkYzAtZmZlMi00NGIyLWFlMzktODliOTMyN2I5Njhh"}
+[debug] [2026-04-01T07:44:40.770Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:44:40.771Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:44:40.771Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MmUxNDlkYzAtZmZlMi00NGIyLWFlMzktODliOTMyN2I5Njhh [none]
+[debug] [2026-04-01T07:44:41.116Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MmUxNDlkYzAtZmZlMi00NGIyLWFlMzktODliOTMyN2I5Njhh 200
+[debug] [2026-04-01T07:44:41.116Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MmUxNDlkYzAtZmZlMi00NGIyLWFlMzktODliOTMyN2I5Njhh {"name":"operations/workflows/MmUxNDlkYzAtZmZlMi00NGIyLWFlMzktODliOTMyN2I5Njhh"}
+[debug] [2026-04-01T07:44:41.627Z] [Create Web app Poller] Retrying task index 0
+[debug] [2026-04-01T07:44:41.627Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:44:41.627Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:44:41.628Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MmUxNDlkYzAtZmZlMi00NGIyLWFlMzktODliOTMyN2I5Njhh [none]
+[debug] [2026-04-01T07:44:41.933Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MmUxNDlkYzAtZmZlMi00NGIyLWFlMzktODliOTMyN2I5Njhh 200
+[debug] [2026-04-01T07:44:41.934Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MmUxNDlkYzAtZmZlMi00NGIyLWFlMzktODliOTMyN2I5Njhh {"name":"operations/workflows/MmUxNDlkYzAtZmZlMi00NGIyLWFlMzktODliOTMyN2I5Njhh"}
+[debug] [2026-04-01T07:44:42.935Z] [Create Web app Poller] Retrying task index 0
+[debug] [2026-04-01T07:44:42.935Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:44:42.936Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:44:42.936Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MmUxNDlkYzAtZmZlMi00NGIyLWFlMzktODliOTMyN2I5Njhh [none]
+[debug] [2026-04-01T07:44:43.325Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MmUxNDlkYzAtZmZlMi00NGIyLWFlMzktODliOTMyN2I5Njhh 200
+[debug] [2026-04-01T07:44:43.325Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MmUxNDlkYzAtZmZlMi00NGIyLWFlMzktODliOTMyN2I5Njhh {"name":"operations/workflows/MmUxNDlkYzAtZmZlMi00NGIyLWFlMzktODliOTMyN2I5Njhh"}
+[debug] [2026-04-01T07:44:45.334Z] [Create Web app Poller] Retrying task index 0
+[debug] [2026-04-01T07:44:45.334Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:44:45.335Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:44:45.335Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MmUxNDlkYzAtZmZlMi00NGIyLWFlMzktODliOTMyN2I5Njhh [none]
+[debug] [2026-04-01T07:44:45.684Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MmUxNDlkYzAtZmZlMi00NGIyLWFlMzktODliOTMyN2I5Njhh 200
+[debug] [2026-04-01T07:44:45.684Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MmUxNDlkYzAtZmZlMi00NGIyLWFlMzktODliOTMyN2I5Njhh {"name":"operations/workflows/MmUxNDlkYzAtZmZlMi00NGIyLWFlMzktODliOTMyN2I5Njhh","done":true,"response":{"@type":"type.googleapis.com/google.firebase.service.v1beta1.WebApp","name":"projects/asop-74f7d/webApps/1:955514442329:web:c4bfc4b875112c0c031748","appId":"1:955514442329:web:c4bfc4b875112c0c031748","displayName":"geolabs-buthole","projectId":"asop-74f7d","webId":"NTEzODYxYmMtMmU2NC00ZTgyLWFjOTgtZmE5NDdkYmMwMWM4","apiKeyId":"90cdf8ca-d603-43e4-af02-886b1282bce1","state":"ACTIVE","expireTime":"1970-01-01T00:00:00Z","etag":"1_e1c4c1c9-b893-4650-8ceb-c5314cfe9ec0"}}
+[info] +  Created a new Firebase web app named "geolabs-buthole" 
+[debug] [2026-04-01T07:44:45.695Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:44:45.695Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:44:45.696Z] >>> [apiv2][query] POST https://firebaseapphosting.googleapis.com/v1beta/projects/asop-74f7d/locations/europe-west4/backends backendId=geolabs-buthole
+[debug] [2026-04-01T07:44:45.696Z] >>> [apiv2][body] POST https://firebaseapphosting.googleapis.com/v1beta/projects/asop-74f7d/locations/europe-west4/backends {"servingLocality":"GLOBAL_ACCESS","labels":{"deployment-tool":"cli-firebase"},"serviceAccount":"firebase-app-hosting-compute@asop-74f7d.iam.gserviceaccount.com","appId":"1:955514442329:web:c4bfc4b875112c0c031748","runtime":{"value":""}}
+[debug] [2026-04-01T07:44:48.570Z] <<< [apiv2][status] POST https://firebaseapphosting.googleapis.com/v1beta/projects/asop-74f7d/locations/europe-west4/backends 200
+[debug] [2026-04-01T07:44:48.570Z] <<< [apiv2][body] POST https://firebaseapphosting.googleapis.com/v1beta/projects/asop-74f7d/locations/europe-west4/backends {"name":"projects/asop-74f7d/locations/europe-west4/operations/operation-1775029485846-64e6141f83e04-017920ec-1a9b5b8b","metadata":{"@type":"type.googleapis.com/google.firebase.apphosting.v1beta.OperationMetadata","createTime":"2026-04-01T07:44:48.562695637Z","target":"projects/asop-74f7d/locations/europe-west4/backends/geolabs-buthole","verb":"create","requestedCancellation":false,"apiVersion":"v1beta"},"done":false}
+[debug] [2026-04-01T07:44:48.571Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:44:48.571Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:44:48.571Z] >>> [apiv2][query] GET https://firebaseapphosting.googleapis.com/v1beta/projects/asop-74f7d/locations/europe-west4/operations/operation-1775029485846-64e6141f83e04-017920ec-1a9b5b8b [none]
+[debug] [2026-04-01T07:44:48.691Z] <<< [apiv2][status] GET https://firebaseapphosting.googleapis.com/v1beta/projects/asop-74f7d/locations/europe-west4/operations/operation-1775029485846-64e6141f83e04-017920ec-1a9b5b8b 200
+[debug] [2026-04-01T07:44:48.691Z] <<< [apiv2][body] GET https://firebaseapphosting.googleapis.com/v1beta/projects/asop-74f7d/locations/europe-west4/operations/operation-1775029485846-64e6141f83e04-017920ec-1a9b5b8b {"name":"projects/asop-74f7d/locations/europe-west4/operations/operation-1775029485846-64e6141f83e04-017920ec-1a9b5b8b","metadata":{"@type":"type.googleapis.com/google.firebase.apphosting.v1beta.OperationMetadata","createTime":"2026-04-01T07:44:48.562695637Z","target":"projects/asop-74f7d/locations/europe-west4/backends/geolabs-buthole","verb":"create","requestedCancellation":false,"apiVersion":"v1beta"},"done":false}
+[debug] [2026-04-01T07:44:49.202Z] [create-asop-74f7d-europe-west4-geolabs-buthole] Retrying task index 0
+[debug] [2026-04-01T07:44:49.203Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:44:49.203Z] Checked if tokens are valid: true, expires at: 1775032905007
+[debug] [2026-04-01T07:44:49.203Z] >>> [apiv2][query] GET https://firebaseapphosting.googleapis.com/v1beta/projects/asop-74f7d/locations/europe-west4/operations/operation-1775029485846-64e6141f83e04-017920ec-1a9b5b8b [none]
+[debug] [2026-04-01T07:44:49.308Z] <<< [apiv2][status] GET https://firebaseapphosting.googleapis.com/v1beta/projects/asop-74f7d/locations/europe-west4/operations/operation-1775029485846-64e6141f83e04-017920ec-1a9b5b8b 200
+[debug] [2026-04-01T07:44:49.308Z] <<< [apiv2][body] GET https://firebaseapphosting.googleapis.com/v1beta/projects/asop-74f7d/locations/europe-west4/operations/operation-1775029485846-64e6141f83e04-017920ec-1a9b5b8b {"name":"projects/asop-74f7d/locations/europe-west4/operations/operation-1775029485846-64e6141f83e04-017920ec-1a9b5b8b","metadata":{"@type":"type.googleapis.com/google.firebase.apphosting.v1beta.OperationMetadata","createTime":"2026-04-01T07:44:48.562695637Z","endTime":"2026-04-01T07:44:49.062675416Z","target":"projects/asop-74f7d/locations/europe-west4/backends/geolabs-buthole","verb":"create","requestedCancellation":false,"apiVersion":"v1beta"},"done":true,"response":{"@type":"type.googleapis.com/google.firebase.apphosting.v1beta.Backend","name":"projects/asop-74f7d/locations/europe-west4/backends/geolabs-buthole","createTime":"2026-04-01T07:44:48.559529327Z","updateTime":"2026-04-01T07:44:49.059567Z","labels":{"deployment-tool":"cli-firebase"},"uri":"geolabs-buthole--asop-74f7d.europe-west4.hosted.app","uid":"355e4a80-dbc5-47a4-a7c0-f4bfe5aa3603","etag":"lAmiE8ByB7TIr-2Mutf2BeaDjnvarQNlT2ds5FT5QGs","reconciling":false,"servingLocality":"GLOBAL_ACCESS","serviceAccount":"firebase-app-hosting-compute@asop-74f7d.iam.gserviceaccount.com","appId":"1:955514442329:web:c4bfc4b875112c0c031748"}}
+[info] i  === Deploy local source setup 
+[info] +  Wrote configuration info to firebase.json 
+[info] i  Writing default settings to apphosting.yaml... 
+[info] +  Wrote C:\Users\Ted\Documents\APP1234\apphosting.yaml 
+[info] +  Firebase initialization complete! 
+[info] 
+=== Hosting Setup
+[debug] [2026-04-01T07:47:11.241Z] TypeError: Cannot read properties of null (reading 'dependencies')
+    at discover (C:\Users\Ted\AppData\Local\nvm\v20.9.0\node_modules\firebase-tools\lib\frameworks\flutter\index.js:23:34)
+    at async discover (C:\Users\Ted\AppData\Local\nvm\v20.9.0\node_modules\firebase-tools\lib\frameworks\index.js:50:32)
+    at async Object.askQuestions (C:\Users\Ted\AppData\Local\nvm\v20.9.0\node_modules\firebase-tools\lib\init\features\hosting\index.js:23:33)
+    at async init (C:\Users\Ted\AppData\Local\nvm\v20.9.0\node_modules\firebase-tools\lib\init\index.js:102:17)
+    at async Command.initAction [as actionFn] (C:\Users\Ted\AppData\Local\nvm\v20.9.0\node_modules\firebase-tools\lib\commands\init.js:232:5)
+[error] 
+[error] Error: An unexpected error has occurred.
