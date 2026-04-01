@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -16,6 +17,47 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+const auth = getAuth(app);
+
+// Auth UI Handling
+const authScreen = document.getElementById('auth-screen');
+const authForm = document.getElementById('auth-form');
+
+window.showAuthForm = () => {
+    document.querySelectorAll('.auth-btn').forEach(b => b.style.display = 'none');
+    authForm.style.display = 'flex';
+};
+
+window.loginWithGoogle = async () => {
+    const provider = new GoogleAuthProvider();
+    try {
+        await signInWithPopup(auth, provider);
+    } catch (err) { alert(err.message); }
+};
+
+window.handleEmailAuth = async () => {
+    const email = document.getElementById('email').value;
+    const pass = document.getElementById('password').value;
+    try {
+        // Try login, if fails, try signup
+        await signInWithEmailAndPassword(auth, email, pass);
+    } catch (err) {
+        try {
+            await createUserWithEmailAndPassword(auth, email, pass);
+        } catch (signupErr) { alert(signupErr.message); }
+    }
+};
+
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+        authScreen.style.display = 'none';
+        if (user.photoURL) document.querySelector('.profile-pic').src = user.photoURL;
+    } else {
+        authScreen.style.display = 'flex';
+    }
+});
+
+window.logout = () => signOut(auth);
 
 const slider = document.getElementById('radius-slider');
 const radiusText = document.getElementById('radius-text');
@@ -41,13 +83,14 @@ async function searchNearbyPlaces(coords, radiusKm) {
     const { Place } = await google.maps.importLibrary("places");
     
     const request = {
-        fields: ["displayName", "location", "id", "primaryType"],
+        // New API requirements
         locationRestriction: {
             center: { lat: coords.latitude, lng: coords.longitude },
             radius: radiusKm * 1000, // Convert km to meters
         },
-        includedPrimaryTypes: ["restaurant", "cafe", "store", "school", "park", "museum", "tourist_attraction"],
-        maxResultCount: 20,
+        // Use simple types for better results coverage
+        includedPrimaryTypes: ["restaurant", "cafe", "establishment"],
+        maxResultCount: 15,
     };
 
     try {
